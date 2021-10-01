@@ -1,7 +1,7 @@
 import unittest
 from selenium import webdriver
 import time
-class MyTestCase(unittest.TestCase):
+class MyWikiTest(unittest.TestCase):
 
     def setUp(self):
 

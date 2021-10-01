@@ -1,9 +1,17 @@
 import unittest
 
+import google_unittest
+import wiki_unittest
 
-class MyTestCase(unittest.TestCase):
-    def test_something(self):
-        self.assertEqual(True, False)  # add assertion here
+
+class MyTestSuite(unittest.TestCase):
+
+    def test_Issue(self):
+        smoke_test = unittest.TestSuite()
+        smoke_test.addTests(
+            unittest.defaultTestLoader.loadTestsFromTestCase(wiki_unittest.MyWikiTest),
+            unittest.defaultTestLoader.loadTestsFromTestCase(google_unittest.MyTestCase)
+        )
 
 
 if __name__ == '__main__':
