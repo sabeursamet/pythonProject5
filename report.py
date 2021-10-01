@@ -3,6 +3,8 @@ import unittest
 import google_unittest
 import wiki_unittest
 
+import os
+direct = os.getcwd()
 
 class MyTestSuite(unittest.TestCase):
 
