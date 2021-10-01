@@ -14,7 +14,6 @@ class MyTestCase(unittest.TestCase):
         driver.find_element_by_xpath('//*[@id="search-icon-legacy"]/yt-icon').click()
         time.sleep(3)
 
-
     def tearDown(self):
         self.driver.quit()
 
