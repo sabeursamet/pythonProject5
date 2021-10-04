@@ -1,4 +1,6 @@
 import unittest
+from HTMLTestRunner import HTMLTestRunner
+
 
 import google_unittest
 import wiki_unittest
@@ -17,7 +19,7 @@ class MyTestSuite(unittest.TestCase):
         outfile = open(direct+ "\SmokeTest.htm" , "w")
 
         runner1 = HTMLTestRunner.HTMLTestRunner(
-            stress = outfile,
+            stream = outfile,
             title = "Test Report",
             description = "Smoke Tests"
         )
